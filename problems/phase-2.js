@@ -16,7 +16,7 @@ const mirrorArray = (array) => {
     newArray.push(el);
   }
 
-  for (let i = array.length - 1; i >= 0; i += 1) {
+  for (let i = array.length - 1; i >= 0; i -= 1) {
     let el = array[i];
     newArray.push(el);
   }
@@ -27,7 +27,7 @@ const mirrorArray = (array) => {
 /*
 2.  hiddenCounter
 Write a function named `hiddenCounter()`. This function will do two things - first
-it will define a count variable, then it will return a function. 
+it will define a count variable, then it will return a function.
 When invoked the function returned by hiddenCounter will increment the counter by 1.
 */
 function hiddenCounter() {
@@ -35,10 +35,10 @@ function hiddenCounter() {
   return () => (count += 1);
 }
 /*
-3. myMap 
+3. myMap
 Write a function  named `myMap` that accepts an array
 and a callback as arguments. The function will return an array of new elements
-obtained by calling the callback on each element of the array, passing in the 
+obtained by calling the callback on each element of the array, passing in the
 element. Assign the below function to a variable using the const keyword.
 
 Do not use the built in Array#map - use Array#forEach for iteration.
