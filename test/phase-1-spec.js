@@ -50,7 +50,7 @@ describe("isOdd(number)", () => {
     //Arrange
     let input = "str";
     //Act
-    let actual = ()=>isOdd(input);
+    let actual = () => isOdd(input);
     //Assert
     expect(actual).to.throw(Error);
     //expect.fail('Remove this expect.fail and replace it with your test');
@@ -62,21 +62,26 @@ describe("myRange(min, max, step)", () => {
     it("should return the correct array with default value step=1", () => {
       //Arrange
 
+      let res = [1, 2, 3, 4, 5]
       //Act
-
+      let actual = myRange(1, 5)
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      expect(actual).to.deep.equal(res)
+
+      //expect.fail('Remove this expect.fail and replace it with your test');
 
     });
   });
   context("if step is provided", () => {
     it("should return the correct array", () => {
       //Arrange
-
+      let step = 2
+      let res = [1, 3, 5]
       //Act
-
+      let actual = myRange(1, 5, step)
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      expect(actual).to.deep.equal(res);
+      //expect.fail('Remove this expect.fail and replace it with your test');
 
     });
   });
@@ -84,9 +89,11 @@ describe("myRange(min, max, step)", () => {
     //Arrange
 
     //Act
-
+    let actual = () => myRange("str", 4)
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(actual).to.throw(Error);
+    
+    //expect.fail('Remove this expect.fail and replace it with your test');
 
   });
 });
