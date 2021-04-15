@@ -64,11 +64,13 @@ describe('myMap', function () {
 describe('avgValue', function () {
   it('should return the average of an array of numbers', function () {
     //Arrange
-
+    let input=[1,2,3,4]
+    let res=2.5;
     //Act
-
+    let actual=avgValue(input);
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(actual).to.equal(res);
+    //expect.fail('Remove this expect.fail and replace it with your test');
 
   })
 })

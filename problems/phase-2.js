@@ -61,8 +61,10 @@ variable using the const keyword.
 const avgValue = (array) => {
   let sum = array.reduce((el, sum = 0) => (sum += el));
 
-  let avg = sum / array.length - 1;
+  let avg = sum / array.length;
   return avg;
 };
+
+console.log(avgValue([1,2,3,4]))
 
 module.exports = { mirrorArray, hiddenCounter, myMap, avgValue };
