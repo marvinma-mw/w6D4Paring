@@ -26,8 +26,8 @@ describe('hiddenCounter()', function () {
     //Arrange
     // let res=()=>{};
     //Act
-    let acutal=hiddenCounter();
-    let res2=acutal();
+    let acutal = hiddenCounter();
+    let res2 = acutal();
     //Assert
     expect(res2).to.equal(1);
     // expect.fail('Remove this expect.fail and replace it with your test');
@@ -38,20 +38,25 @@ describe('hiddenCounter()', function () {
 describe('myMap', function () {
   it("should function like the built in Array#map", function () {
     //Arrange
+    let input = [1, 2, 3]
+    let res = input.map((el) => el)
 
     //Act
-
+    let actual = myMap(input, res)
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(actual).to.deep.equal(input)
+
+    //expect.fail('Remove this expect.fail and replace it with your test');
   });
 
   it("should not call the built in Array#map", function () {
     //Arrange
-
+    let mapSpy = chai.spy.on(Array.prototype, "map")
     //Act
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(mapSpy).to.have.not.been.called()
+    //expect.fail('Remove this expect.fail and replace it with your test');
   });
 })
 
