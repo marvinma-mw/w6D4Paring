@@ -3,8 +3,9 @@
 */
 function isFive(num) {
   if (num === 5) {
-    return 5;
+    return true;
   }
+  return false;
 }
 //console.log(isFive(5))
 /*2. Is Odd Write a function isOdd that takes in a number as an argument and
@@ -14,8 +15,13 @@ function isOdd(number) {
   if (typeof number !== 'number') {
     throw Error('some error')
   }
-  return (number % 2 === 0);
+  if (number % 2 === 0){
+    return false;
+  }else{
+    return true
+  }
 }
+// console.log(isOdd("str"))
 
 /*3. Array  of the Range Write a function myRange(min, max, step) that takes in
       3 numbers as parameters. The function should return an array of the

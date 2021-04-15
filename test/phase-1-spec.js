@@ -6,18 +6,19 @@ describe("isFive(num)", () => {
     //Arrange
     let expected = 5
     //Act
-
-    let actual = isFive()
+    let actual = isFive(expected)
     //Assert
-    expect(actual).to.equal(expected)
+    expect(actual).to.equal(true)
     //expect.fail('Remove this expect.fail and replace it with your test');
 
     //Arrange
+    let input = 4;
 
     //Act
+    let actual2 = isFive(input);
 
     //Assert
-
+    expect(actual2).to.equal(false)
     //expect.fail('Remove this expect.fail and replace it with your test');
 
   });
@@ -25,29 +26,34 @@ describe("isFive(num)", () => {
 describe("isOdd(number)", () => {
   it("should return true if number is odd", () => {
     //Arrange
+    let input = 3;
 
     //Act
+    let acutal = isOdd(input)
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(acutal).to.equal(true)
+    // expect.fail('Remove this expect.fail and replace it with your test');
 
   });
   it("should return false if the num is even", () => {
     //Arrange
-
+    let input = 2;
     //Act
-
+    let acutal = isOdd(input);
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(acutal).to.equal(false);
+    //expect.fail('Remove this expect.fail and replace it with your test');
 
   });
   it("should throw an error if num is not type of Number", () => {
     //Arrange
-
+    let input = "str";
     //Act
-
+    let actual = ()=>isOdd(input);
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(actual).to.throw(Error);
+    //expect.fail('Remove this expect.fail and replace it with your test');
 
   });
 });
