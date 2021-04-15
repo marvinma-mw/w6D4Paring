@@ -24,11 +24,13 @@ describe('hiddenCounter()', function () {
 
   it('should return a function that will increment the counter when invoked', function () {
     //Arrange
-
+    // let res=()=>{};
     //Act
-
+    let acutal=hiddenCounter();
+    let res2=acutal();
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(res2).to.equal(1);
+    // expect.fail('Remove this expect.fail and replace it with your test');
   })
 })
 
